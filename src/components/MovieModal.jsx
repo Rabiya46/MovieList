@@ -19,6 +19,7 @@ const style = {
   gap: "20px",
 };
 
+// eslint-disable-next-line react/prop-types
 const MovieModal = ({ isVisible, onIsVisible, fetch, movie }) => {
   const [editedMovie, setEditedMovie] = React.useState(movie);
 
@@ -67,7 +68,7 @@ const MovieModal = ({ isVisible, onIsVisible, fetch, movie }) => {
               setEditedMovie({ ...editedMovie, image: e.target.value })
             }
           />
-
+          {/* eslint-disable-next-line react/prop-types */}
           <Button onClick={() => updateMovie(movie.id)}>Save</Button>
         </Box>
       </Modal>

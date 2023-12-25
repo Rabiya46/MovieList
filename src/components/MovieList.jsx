@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import MovieModal from "./MovieModal";
 
+// eslint-disable-next-line react/prop-types
 const MovieList = ({ movies, onDelete, fetch }) => {
   const [isVisible, setIsVisible] = React.useState(false);
   const handleIsVisible = () => setIsVisible((prev) => !prev);
   return (
     <MainContainer>
+      {/* eslint-disable-next-line react/prop-types */}
       {movies?.map((movie) => (
         <Container key={movie.id}>
           <img src={movie.image} alt="img" />
